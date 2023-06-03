@@ -394,16 +394,18 @@ but if you need a quick and simple way and have access to a unix based machine
 (e.g., OSX, Linux), you can use the <code>find</code> command line tool:</p>
 <div class="highlight"><pre><span></span><code>find<span class="w"> </span>&lt;path_to_ds&gt;<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;*.fif&#39;</span><span class="w"> </span>-exec<span class="w"> </span>truncate<span class="w"> </span>-s<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span>+
 </code></pre></div>
-<p>which means:
-- in this directory <code>&lt;path_to_ds&gt;</code>
-- ... find everything of type "file" (or specify <code>d</code> for directory, ...)
-- [optional] ... use <code>-name</code> with wildcard <code>*</code> to match to particular file types
-- ... for each file, execute something
-- ... namely, truncate the file
-- ... to size 0
-- <code>{}</code> is where a file name is put automatically (do not modify it)
-- <code>+</code> means, this is performed not file-wise but with a bunch of files at once.
-  Could also be <code>\;</code> to have it one after the other</p>
+<p>which means:</p>
+<ul>
+<li>in this directory <code>&lt;path_to_ds&gt;</code></li>
+<li>... find everything of type "file" (or specify <code>d</code> for directory, ...)</li>
+<li>[optional] ... use <code>-name</code> with wildcard <code>*</code> to match to particular file types</li>
+<li>... for each file, execute something</li>
+<li>... namely, truncate the file</li>
+<li>... to size 0</li>
+<li><code>{}</code> is where a file name is put automatically (do not modify it)</li>
+<li><code>+</code> means, this is performed not file-wise but with a bunch of files at once.
+    Could also be <code>\;</code> to have it one after the other</li>
+</ul>
 <h2 id="how-to-make-a-release"><a class="toclink" href="#how-to-make-a-release">How to make a release</a></h2>
 <p>We release <code>bids-examples</code> in sync with <code>bids-specification</code>.</p>
 <ol>
