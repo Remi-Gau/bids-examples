@@ -421,13 +421,13 @@ but if you need a quick and simple way and have access to a unix based machine
     Could also be <code>\;</code> to have it one after the other</li>
 </ul>
 <h2 id="how-to-generate-the-tables-in-the-readme"><a class="toclink" href="#how-to-generate-the-tables-in-the-readme">How to generate the tables in the readme</a></h2>
-<p>Edit the <code>dataset_listing.tsv</code> file to add or update datasets from the table.</p>
-<p>Install all the necessary dependencies:</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>tool/requirements.txt
-</code></pre></div>
-<p>Then run the script:</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>tools/print_dataset_listing.py
-</code></pre></div>
+<p>Note that these steps must be executed whenever a new dataset is added to the repository.</p>
+<ol>
+<li>Edit the <code>dataset_listing.tsv</code> file to add or update datasets from the table.</li>
+<li>Install all the necessary dependencies: <code>pip install -r tools/requirements.txt</code></li>
+<li>Then run the script: <code>python tools/print_dataset_listing.py</code></li>
+<li>Finally, <code>git commit</code> all changes and <code>git push</code> them to your remote (for example when you are working on a Pull Request)</li>
+</ol>
 <h2 id="how-to-make-a-release"><a class="toclink" href="#how-to-make-a-release">How to make a release</a></h2>
 <p>We release <code>bids-examples</code> in sync with <code>bids-specification</code>.</p>
 <ol>
